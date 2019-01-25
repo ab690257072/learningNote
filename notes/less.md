@@ -28,4 +28,10 @@ div {
     @{borderStyle}: @Solid;
 }
 ```
-
+4.  url变量
+``` less
+@images: '../img';
+div {
+    background: url('@{images}/dog.png');
+}
+```
