@@ -4,7 +4,7 @@
 *   定义一套适配规则，自动适配剩下的两种尺寸(其实不仅这两种，你懂的)
 *   特殊适配效果给出设计效果
 
-![](http://www.w3cplus.com/sites/default/files/blogs/2015/1511/rem-6.jpg)
+![](http://ww1.sinaimg.cn/large/0066m5DPgy1g078x5a8ofj30go0c2wg8.jpg)
 > 手淘设计师常选择 **iPhone6** 作为基准设计尺寸，交付给前端的设计尺寸是按 **750px * 1334px** 为准(高度会随着内容多少而改变)。前端开发人员通过一套适配规则自动适配到其他的尺寸。
 ***
 ### 基本概念
@@ -33,7 +33,7 @@ div {
 ```
 >参考：[走向视网膜（Retina）的Web时代](https://www.w3cplus.com/css/towards-retina-web.html)
 ####    适配图片的简单示范
-![](http://www.w3cplus.com/sites/default/files/blogs/201212/retina-web-10.jpg)
+![](http://ww1.sinaimg.cn/large/0066m5DPgy1g078tpa2xnj31191v04dc.jpg)
 ####    meta标签
 告诉浏览器如何规范渲染页面
 ``` html
@@ -68,14 +68,14 @@ div {
 ##  [再聊移动端页面的适配](https://www.w3cplus.com/css/vw-for-layout.html)
 之前的 flexible 是模拟了 `vw`，现在考虑直接用 `vw` 方案。
 `vw` 基于 `viewport`，而 `viewport` 就是浏览器可视区域。
-![](https://www.w3cplus.com/sites/default/files/blogs/2017/1707/vw-layout-4.png)
+![](http://ww1.sinaimg.cn/large/0066m5DPgy1g078x6mjjkj30u80cq75k.jpg)
 `viewport` 相关单位有**4**个：
 *   `vw`：`window.innerWidth` 的 **1%**；
 *   `vh`：`window.innerHeight` 的 **1%**；
 *   `vmin`：`vw` 和 `vh` 中的较小值；
 *   `vmax`：`vw` 和 `vh` 中的较大值
 
-![](https://www.w3cplus.com/sites/default/files/blogs/2017/1707/vw-layout-5.png)
+![](http://ww1.sinaimg.cn/large/0066m5DPly1g0791vtpejj30hr0j2dgn.jpg)
 设计稿是 `750px` 的话，`100vw = 750px`，`1vw = 7.5px`，可以使用 `postCSS` 的插件 `postcss-px-to-viewport` 将 `px` 转换成 `vw` 值。
 
 以下情况均可使用 `vw` 适配我们的页面：
