@@ -42,6 +42,10 @@
 *   `animation-iteration-count`
 *   `animation-fill-mode`
 *   `animation-play-state`
+####    10. transition
+过渡
+####    11. transform-origin
+2D 与 3D 变换
 ***
 ### 练习
 *   codepen
