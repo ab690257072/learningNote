@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>css-animation-demo</title>
     <style>
-        ul, li {
+        ul,
+        li {
             list-style: none;
         }
-        .ct > li {
+
+        .ct>li {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -18,30 +21,70 @@
             border: 1px solid #d2d2d2;
             box-sizing: border-box;
         }
+
         /* spin */
-        .spin {
-        width: 40px;
-        height: 40px;
-        background: #58a;
-        border-radius: 50%;
-        animation: fadeOut 1s infinite ease-in-out;
+        .spin-demo {
+            width: 40px;
+            height: 40px;
+            background: #58a;
+            border-radius: 50%;
+            animation: fadeOut 1s infinite ease-in-out;
         }
+
         @keyframes fadeOut {
-        from {
-            transform: scale(0);
+            from {
+                transform: scale(0);
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 0;
+            }
         }
-        to {
-            transform: scale(1);
-            opacity: 0;
+
+        /* photo */
+        .photo-demo div {
+            position: absolute;
+            width: 120px;
+            height: 100px;
+            background: red;
+            transform-origin: center 300px;
+            transition: transform .3s ease;
         }
+
+        .photo-demo .c1 {
+            background: blue;
+            transform: rotate(5deg);
+        }
+
+        .photo-demo .c3 {
+            background: green;
+            transform: rotate(-5deg);
+        }
+
+        .photo-demo:hover .c1 {
+            transform: rotate(10deg);
+        }
+
+        .photo-demo:hover .c3 {
+            transform: rotate(-10deg);
         }
     </style>
 </head>
+
 <body>
     <ul class="ct">
         <li>
-            <div class="spin"></div>
+            <div class="spin-demo"></div>
+        </li>
+        <li>
+            <div class="photo-demo">
+                <div class="c1"></div>
+                <div class="c2"></div>
+                <div class="c3"></div>
+            </div>
         </li>
     </ul>
 </body>
+
 </html>
